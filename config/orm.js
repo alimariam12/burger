@@ -1,8 +1,8 @@
 let connection = require("../config/connection");
 
 let orm = {
-  selectALL: function (tableName, cb) {
-    let queryString = `SELECT * FROM ${tableName};`;
+  selectALL: function (tableInput, cb) {
+    let queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, function (err, res) {
       if (err) {
         throw err;
@@ -22,8 +22,8 @@ let orm = {
       cb(res);
     });
   },
-  updateOne: function (tableName, cols, booleans, condition, cb) {
-    let queryString = `UPDATE ${tableName} SET ${cols} = ${booleans} WHERE ${condition}`;
+  updateOne: function (tableName, objColVals, booleans, condition, cb) {
+    let queryString = `UPDATE ${tableName} SET ${objColVals} = ${booleans} WHERE ${condition}`;
 
     console.log(queryString);
 

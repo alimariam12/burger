@@ -2,12 +2,10 @@ let express = require("express");
 
 let router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
 let burger = require("../models/burger");
 
-// Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  burger.selectALL(function(data) {
     let hbsObject = {
       burgerAll: data
     };
@@ -17,12 +15,11 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create([
+  burger.insertOne([
     "burgerName"
   ], [
     req.body.burgerName
   ], function(result) {
-    // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
@@ -32,7 +29,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update({
+  burger.updateOne({
     burgerName: req.body.burgerName
   }, condition, function(result) {
     if (result.changedRows == 0) {
