@@ -2,7 +2,7 @@ let express = require("express");
 
 let router = express.Router();
 
-let burger = require("../models/burger");
+let burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
   burger.selectALL(function(data) {
@@ -29,9 +29,9 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.updateOne({burgerName: req.body.burgerName 
-  // "devoured"
-  }, 1, condition, function(result) {
+  burger.updateOne(
+    // {burgerName: req.body.burgerName }
+    "devoured", 1, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -44,7 +44,7 @@ router.put("/api/burgers/:id", function(req, res) {
 router.delete("/api/burgers/:id", function(req, res) {
   let condition = "id = " + req.params.id;
 
-  buger.delete(condition, function(result) {
+  burger.deleteOne(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();

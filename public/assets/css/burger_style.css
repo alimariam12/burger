@@ -1,0 +1,27 @@
+body {
+  background: url("https://cdn.wallpapersafari.com/89/88/M2wx07.jpg") no-repeat
+    center center fixed;
+  background-size: 1500px 800px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  color: white;
+  font-family: 'Chalkduster', fantasy;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ul {
+    list-style-type: none;
+}
+.card{
+    background-color: black;
+    border:2px solid white;
+    border-radius: 15px;
+    margin-top: 50px;
+}
