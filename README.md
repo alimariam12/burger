@@ -14,7 +14,7 @@
    For this assignment, we need to create a burger devouring app with MySQL, Node, Express, and ORM. We also need to use the MVC design pattern with Node and MySQL to query and route data and Handlebars to generate the HTML.
   ## Installation
   To install:
-  - A new repository for the assignment and clone to repository git@github.com:alimariam12/Professional-README.git to the terminal.
+  - A new repository for the assignment and clone to repository `git@github.com:alimariam12/burger.git` to the terminal.
   - Visual Studio Code: after downloading the homework to the appropriate folder, use command code . to get to VSC.
   - Open terminal on VSC and run `npm install`. When you have the prompts writer you will then run `node server.js` to answer the prompts.
   ## Technology 
