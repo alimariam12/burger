@@ -1,4 +1,3 @@
-# Burger
 <h1 align="center">Burger </h1>
   
   ![badge](https://img.shields.io/badge/license-MIT-green)<br />
@@ -6,7 +5,7 @@
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
-  - [Technology] (#technology)
+  - [Technology](#technology)
   - [Usage](#usage)
   - [License](#license)
   - [Questions](#questions)
